@@ -6,7 +6,7 @@ import { Opening } from "../../../../../types/opening";
 import { Requisition } from "../../../../../types/requisition";
 
 export const dynamic = "force-static";
-export const revalidate = 10 * 60; // Fallback revalidation time
+const revalidate = 10 * 60; // Fallback revalidation time
 
 export async function GET(request: Request) {
   const fetchJobRequisitions = unstable_cache(
